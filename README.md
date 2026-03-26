@@ -52,4 +52,4 @@ services:
 
 ## Automatic updates
 
-A GitHub Actions workflow runs twice daily and rebuilds the image whenever the upstream `wordpress:latest` digest changes.
+A GitHub Actions workflow runs every 6 hours and rebuilds the image whenever the upstream `wordpress:latest` digest changes.
