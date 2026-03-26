@@ -60,7 +60,7 @@ jobs:
         id: wp-version
         run: |
           docker pull wordpress:latest
-          WP_VERSION=$(docker run --rm wordpress:latest wp --version 2>/dev/null || echo "unknown")
+          WP_VERSION=$(docker run --rm wordpress:latest php -r "require '/usr/src/wordpress/wp-includes/version.php'; echo \$wp_version;" 2>/dev/null || echo "unknown")
           echo "version=$WP_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Docker metadata
