@@ -7,7 +7,7 @@ on:
       - 'Dockerfile'
       - '.github/workflows/build.yml'
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 0,12 * * *'
   workflow_dispatch:
 
 env:
